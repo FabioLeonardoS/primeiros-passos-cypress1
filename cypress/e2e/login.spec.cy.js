@@ -13,5 +13,6 @@ describe('Orange HRM Tests', () => {
     cy.get('[name="password"]').type('admin123')
     cy.get('[type="submit"]').click() 
     cy.get('.oxd-alert') 
+    
   })
 })
