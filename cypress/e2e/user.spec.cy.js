@@ -1,8 +1,10 @@
 import userData from '../fixtures/users/userData.json'
 import LoginPage from '../pages/loginPage'
 import DashboardPage from '../pages/dashboardPage'
+import MenuPage from '../pages/menuPage'
 const loginPage = new LoginPage()
 const dashboardPage = new DashboardPage()
+const menuPage = new MenuPage()
 
 describe('Orange HRM Tests', () => {
   const selectorsList = {
@@ -28,7 +30,7 @@ describe('Orange HRM Tests', () => {
     loginPage.accessLoginPage()
     loginPage.loginWithUser(userData.userSuccess.username, userData.userSuccess.password)
     dashboardPage.checkDashboardPage()
-    cy.get(selectorsList.myInfoButton).click()
+    menuPage.acessMyInfo()
     cy.get(selectorsList.firstNameField).clear().type('Jose')
     cy.get(selectorsList.middleNameField).clear().type('das')
     cy.get(selectorsList.lastNameField).clear().type('Botas')
