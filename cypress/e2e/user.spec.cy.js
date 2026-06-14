@@ -1,5 +1,5 @@
 import userData from '../fixtures/users/userData.json'
-import LoginPage from '../pages/loginPage' 
+import LoginPage from '../pages/loginPage'
 import DashboardPage from '../pages/dashboardPage'
 const loginPage = new LoginPage()
 const dashboardPage = new DashboardPage()
@@ -49,7 +49,7 @@ describe('Orange HRM Tests', () => {
     cy.get('.oxd-select-dropdown > :nth-child(3)').click()
     cy.get(selectorsList.submitButton).eq(0).click()
     cy.get('body').should('contain', 'Successfully Updated')
-    cy.get('.oxd-toast-close').click() 
+    cy.get('.oxd-toast-close').click()
 
 
 
