@@ -11,6 +11,7 @@ class MyinforPage {
             listItem: '[tabindex="0"]',
             listMaritalStatus: '.oxd-select-wrapper',
             CloseButton: ".--close",
+            ClosepopupButton: ".oxd-toast-close",
             submitButton: '[type="submit"]',
             maritalStatus: '.oxd-select-dropdown > :nth-child(3)',
             listNationality: '.oxd-select-wrapper',
@@ -61,7 +62,7 @@ class MyinforPage {
     }
     checkSuccessMessage() {
         cy.get(this.selectorsList().checkSuccessMessage).should('contain', 'Successfully Updated')
-        cy.get(this.selectorsList().CloseButton).click()
+        cy.get(this.selectorsList().ClosepopupButton).click()
     }   
 
 
