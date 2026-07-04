@@ -11,7 +11,7 @@ const myInfoPage = new MyinforPage()
 
 describe('User Infor Update', () => { 
 
-  it.only('User Infor Update - success', () => {
+  it ('User Infor Update - success', () => {
     loginPage.accessLoginPage()
     loginPage.loginWithUser(userData.userSuccess.username, userData.userSuccess.password)
     dashboardPage.checkDashboardPage()
@@ -29,12 +29,9 @@ describe('User Infor Update', () => {
 
    
   })
-  it.skip('Login - Fail', () => {
-    cy.visit('/auth/login')
-    cy.get(selectorsList.usernameField).type(userData.UserFail.username)
-    cy.get(selectorsList.passwordField).type(userData.UserFail.password)
-    cy.get(selectorsList.loginButton).click()
-    cy.get(selectorsList.wrongCredentialAlert).should("be.visible")
-
+  it ('Login - Fail', () => {
+    loginPage.accessLoginPage()
+    loginPage.loginWithUser(userData.userFail.username, userData.userFail.password)
+    loginPage.checkAcessInvalid()
   })
 })
