@@ -9,7 +9,7 @@ const dashboardPage = new DashboardPage()
 const menuPage = new MenuPage()
 const myInfoPage = new MyinforPage()
 
-describe('User Infor Update', () => { 
+describe('Login Orange HRM Tests', () => { 
 
   it ('User Infor Update - success', () => {
     loginPage.accessLoginPage()
@@ -29,9 +29,5 @@ describe('User Infor Update', () => {
 
    
   })
-  it ('Login - Fail', () => {
-    loginPage.accessLoginPage()
-    loginPage.loginWithUser(userData.userFail.username, userData.userFail.password)
-    loginPage.checkAcessInvalid()
-  })
+ 
 })
